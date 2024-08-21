@@ -1,0 +1,43 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenido-resumen{
+    p{
+        margin-bottom: 1rem;
+    }
+    span{
+        color: v.$azul;
+        font-weight: v.$bold;
+        font-size: 2.4rem;
+    }
+
+    .titulos{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+
+        @include m.telefono{
+            padding: 1rem 10rem;
+        }
+    }
+    .resumen-cita{
+        margin-bottom: 6rem;
+    }
+
+}
+
+.contenedor-servicio{
+    
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include m.telefono{
+        padding: 1rem 10rem;
+    }
+
+
+    &:last-of-type{
+        border-bottom: 1px solid v.$gris;
+    }
+}
